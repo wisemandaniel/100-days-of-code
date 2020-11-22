@@ -1,0 +1,165 @@
+<?php include('server.php') ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <style>
+      .formholder {
+        background-color: black;
+      }
+      .formsheet {
+        background: linear-gradient(to left, rgba(10,0,100, 0.7), rgba(0,0,0,0.7)), url('img/1.jpg');
+        box-shadow: 5px 7px 5px solid grey;
+        border-radius: 10px;
+      }
+      body {
+        width: 100%;
+        background: url('img/7.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .button-holder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button-signup {
+        background: skyblue;
+        border: none;
+        height: 50px;
+        width: 99%;
+        border-radius: 12px;
+      }
+      .button-signup:hover {
+        background: linear-gradient(to left, rgb(255,0,0,0.7), rgba(0,0,255,0.7));
+        box-shadow: 5px 2px 3px solid grey;
+        width: 100%;
+      }
+    </style>
+  </head>
+<body>
+<div class="container my-4 signupForm">
+
+<section id="register-form">
+
+     
+     <!-- Description -->
+     <p>
+     </p>
+   
+     <!--Grid row-->
+     <div class="row justify-content-center">
+   
+       <!--Grid column-->
+       <div class="col-md-6 mb-4">
+   
+         <!--Section: Live preview-->
+         <section class="formholder">
+   
+           <!-- Default form register -->
+           <form class="text-center border border-light p-5 formsheet" method="post" action="sign up.php">
+   <?php include('errors.php'); ?>
+             <p class="h4 mb-4">Sign up</p>
+   
+             <div class="form-row mb-4">
+               <div class="col">
+                 <!-- First name -->
+                 <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" name="fname" value="<?php echo $fname; ?>">
+               </div>
+               <br>
+               <div class="col">
+                 <!-- Last name -->
+                 <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" name="lname" value="<?php echo $lname; ?>">
+               </div>
+               <br>
+               <div class="col">
+                 <!-- First name -->
+                 <input type="text" id="defaultRegisterFormUsername" class="form-control" placeholder="Username" name="username" value="<?php echo $username; ?>">
+               </div>
+             </div>
+   
+             <!-- E-mail -->
+             <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" name="email" value="<?php echo $email; ?>">
+   
+             <!-- Password -->
+             <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="password_1">
+         
+              <br>
+              <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" name="password_2">
+         
+              <br>
+             <!-- Phone number -->
+             <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" name="PhoneNumber">
+             <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+               Optional - for two step authentication
+             </small>
+   
+             <!-- Newsletter -->
+             <div class="custom-control custom-checkbox">
+               <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+               <label class="custom-control-label" for="defaultRegisterFormNewsletter">remember me</label>
+             </div>
+   
+             <!-- Sign up button -->
+             <div class="button-holder">
+             <button class="button-signup my-4 btn-block waves-effect waves-light" type="submit" name="reg_user">Sign up</button>
+             </div>
+   
+             <!-- Social register -->
+             <p style="color: red;">or sign up with:</p>
+   
+             <a type="button" class="light-blue-text mx-2">
+               <i class="fab fa-facebook-f"></i>
+             </a>
+             <a type="button" class="light-blue-text mx-2">
+               <i class="fab fa-twitter"></i>
+             </a>
+             <a type="button" class="light-blue-text mx-2">
+               <i class="fab fa-linkedin-in"></i>
+             </a>
+             <a type="button" class="light-blue-text mx-2">
+               <i class="fab fa-github"></i>
+             </a>
+   
+             <hr>
+   
+             <!-- Terms of service -->
+             <p>By clicking
+               <em>Sign up</em> you agree to our
+               <a href="" target="_blank">terms of service</a>
+   
+           </p>
+         <p>Already have an account? <a href="sign in.php">sign in</a></p></form>
+           <!-- Default form register -->
+   
+         </section>
+         <!--Section: Live preview-->
+   
+       
+
+
+<!-- MDB -->
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+</body>
+</html>
